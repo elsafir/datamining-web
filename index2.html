@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=".">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#welcome-to-tugas-1-penambangan-data">Welcome to Tugas 1 Penambangan Data</a></li>
+            <li><a href="#tugas-1">TUGAS 1</a></li>
+            <li><a href="#project-layout">Project layout</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-tugas-1-penambangan-data">Welcome to Tugas 1 Penambangan Data</h1>
+<p>NIM : 180411100079</p>
+<p>NAMA : ALFUL LAILA S</p>
+<h2 id="tugas-1">TUGAS 1</h2>
+<pre><code>from scipy import stats
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+</code></pre>
+
+<pre><code>df= pd.read_csv(&quot;penambangan1.csv&quot;)
+df
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>harga buku</th>
+<th>berat buku /gram</th>
+<th>jumlah stok perbulan</th>
+<th>jumlah terjual bulan ini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>215319</td>
+<td>148</td>
+<td>110</td>
+<td>25</td>
+</tr>
+<tr>
+<td>1</td>
+<td>241046</td>
+<td>133</td>
+<td>139</td>
+<td>44</td>
+</tr>
+<tr>
+<td>2</td>
+<td>146993</td>
+<td>73</td>
+<td>160</td>
+<td>48</td>
+</tr>
+<tr>
+<td>3</td>
+<td>37237</td>
+<td>108</td>
+<td>105</td>
+<td>50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>239236</td>
+<td>85</td>
+<td>128</td>
+<td>28</td>
+</tr>
+<tr>
+<td>5</td>
+<td>148009</td>
+<td>123</td>
+<td>83</td>
+<td>21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>47522</td>
+<td>118</td>
+<td>178</td>
+<td>50</td>
+</tr>
+<tr>
+<td>7</td>
+<td>65608</td>
+<td>50</td>
+<td>90</td>
+<td>43</td>
+</tr>
+<tr>
+<td>8</td>
+<td>43415</td>
+<td>106</td>
+<td>152</td>
+<td>23</td>
+</tr>
+<tr>
+<td>9</td>
+<td>53957</td>
+<td>59</td>
+<td>183</td>
+<td>26</td>
+</tr>
+<tr>
+<td>10</td>
+<td>94541</td>
+<td>52</td>
+<td>58</td>
+<td>25</td>
+</tr>
+<tr>
+<td>11</td>
+<td>213957</td>
+<td>149</td>
+<td>146</td>
+<td>34</td>
+</tr>
+<tr>
+<td>12</td>
+<td>69540</td>
+<td>62</td>
+<td>173</td>
+<td>33</td>
+</tr>
+<tr>
+<td>13</td>
+<td>134574</td>
+<td>126</td>
+<td>137</td>
+<td>28</td>
+</tr>
+<tr>
+<td>14</td>
+<td>145631</td>
+<td>96</td>
+<td>134</td>
+<td>28</td>
+</tr>
+<tr>
+<td>15</td>
+<td>194378</td>
+<td>75</td>
+<td>92</td>
+<td>50</td>
+</tr>
+<tr>
+<td>16</td>
+<td>133493</td>
+<td>115</td>
+<td>132</td>
+<td>41</td>
+</tr>
+<tr>
+<td>17</td>
+<td>222274</td>
+<td>107</td>
+<td>50</td>
+<td>42</td>
+</tr>
+<tr>
+<td>18</td>
+<td>142645</td>
+<td>49</td>
+<td>51</td>
+<td>23</td>
+</tr>
+<tr>
+<td>19</td>
+<td>169453</td>
+<td>56</td>
+<td>165</td>
+<td>45</td>
+</tr>
+<tr>
+<td>20</td>
+<td>85688</td>
+<td>134</td>
+<td>197</td>
+<td>45</td>
+</tr>
+<tr>
+<td>21</td>
+<td>164231</td>
+<td>58</td>
+<td>161</td>
+<td>42</td>
+</tr>
+<tr>
+<td>22</td>
+<td>205956</td>
+<td>106</td>
+<td>78</td>
+<td>48</td>
+</tr>
+<tr>
+<td>23</td>
+<td>126871</td>
+<td>121</td>
+<td>148</td>
+<td>43</td>
+</tr>
+<tr>
+<td>24</td>
+<td>241294</td>
+<td>110</td>
+<td>177</td>
+<td>35</td>
+</tr>
+<tr>
+<td>25</td>
+<td>44454</td>
+<td>127</td>
+<td>156</td>
+<td>44</td>
+</tr>
+<tr>
+<td>26</td>
+<td>132903</td>
+<td>57</td>
+<td>157</td>
+<td>30</td>
+</tr>
+<tr>
+<td>27</td>
+<td>94979</td>
+<td>73</td>
+<td>90</td>
+<td>45</td>
+</tr>
+<tr>
+<td>28</td>
+<td>75817</td>
+<td>83</td>
+<td>95</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>61783</td>
+<td>64</td>
+<td>159</td>
+<td>37</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>69</td>
+<td>109358</td>
+<td>138</td>
+<td>73</td>
+<td>24</td>
+</tr>
+<tr>
+<td>70</td>
+<td>163947</td>
+<td>153</td>
+<td>72</td>
+<td>39</td>
+</tr>
+<tr>
+<td>71</td>
+<td>63159</td>
+<td>125</td>
+<td>107</td>
+<td>23</td>
+</tr>
+<tr>
+<td>72</td>
+<td>42104</td>
+<td>109</td>
+<td>145</td>
+<td>46</td>
+</tr>
+<tr>
+<td>73</td>
+<td>80948</td>
+<td>95</td>
+<td>149</td>
+<td>36</td>
+</tr>
+<tr>
+<td>74</td>
+<td>143200</td>
+<td>106</td>
+<td>189</td>
+<td>31</td>
+</tr>
+<tr>
+<td>75</td>
+<td>83148</td>
+<td>112</td>
+<td>162</td>
+<td>32</td>
+</tr>
+<tr>
+<td>76</td>
+<td>147670</td>
+<td>144</td>
+<td>188</td>
+<td>30</td>
+</tr>
+<tr>
+<td>77</td>
+<td>105098</td>
+<td>115</td>
+<td>161</td>
+<td>22</td>
+</tr>
+<tr>
+<td>78</td>
+<td>135910</td>
+<td>87</td>
+<td>70</td>
+<td>46</td>
+</tr>
+<tr>
+<td>79</td>
+<td>87125</td>
+<td>71</td>
+<td>82</td>
+<td>28</td>
+</tr>
+<tr>
+<td>80</td>
+<td>135804</td>
+<td>95</td>
+<td>79</td>
+<td>42</td>
+</tr>
+<tr>
+<td>81</td>
+<td>30766</td>
+<td>109</td>
+<td>166</td>
+<td>26</td>
+</tr>
+<tr>
+<td>82</td>
+<td>87804</td>
+<td>76</td>
+<td>190</td>
+<td>29</td>
+</tr>
+<tr>
+<td>83</td>
+<td>233446</td>
+<td>88</td>
+<td>95</td>
+<td>26</td>
+</tr>
+<tr>
+<td>84</td>
+<td>31834</td>
+<td>97</td>
+<td>103</td>
+<td>21</td>
+</tr>
+<tr>
+<td>85</td>
+<td>54182</td>
+<td>112</td>
+<td>76</td>
+<td>22</td>
+</tr>
+<tr>
+<td>86</td>
+<td>146553</td>
+<td>121</td>
+<td>59</td>
+<td>42</td>
+</tr>
+<tr>
+<td>87</td>
+<td>208887</td>
+<td>124</td>
+<td>57</td>
+<td>24</td>
+</tr>
+<tr>
+<td>88</td>
+<td>207968</td>
+<td>101</td>
+<td>153</td>
+<td>35</td>
+</tr>
+<tr>
+<td>89</td>
+<td>249144</td>
+<td>50</td>
+<td>142</td>
+<td>30</td>
+</tr>
+<tr>
+<td>90</td>
+<td>110491</td>
+<td>132</td>
+<td>141</td>
+<td>30</td>
+</tr>
+<tr>
+<td>91</td>
+<td>219300</td>
+<td>126</td>
+<td>147</td>
+<td>37</td>
+</tr>
+<tr>
+<td>92</td>
+<td>169832</td>
+<td>95</td>
+<td>151</td>
+<td>33</td>
+</tr>
+<tr>
+<td>93</td>
+<td>167964</td>
+<td>77</td>
+<td>200</td>
+<td>34</td>
+</tr>
+<tr>
+<td>94</td>
+<td>70991</td>
+<td>92</td>
+<td>118</td>
+<td>46</td>
+</tr>
+<tr>
+<td>95</td>
+<td>50295</td>
+<td>155</td>
+<td>166</td>
+<td>43</td>
+</tr>
+<tr>
+<td>96</td>
+<td>100656</td>
+<td>92</td>
+<td>71</td>
+<td>23</td>
+</tr>
+<tr>
+<td>97</td>
+<td>212300</td>
+<td>122</td>
+<td>65</td>
+<td>41</td>
+</tr>
+<tr>
+<td>98</td>
+<td>93128</td>
+<td>86</td>
+<td>67</td>
+<td>31</td>
+</tr>
+</tbody>
+</table>
+<pre><code>from IPython.display import HTML, display
+import tabulate
+table=[
+        [&quot;method&quot;]+[x for x in df.columns],
+        [&quot;describe()&quot;]+['&lt;pre&gt;'+str(df[col].describe())+'&lt;/pre&gt;' for col in df.columns],
+        [&quot;count()&quot;]+[df[col].count() for col in df.columns],
+        [&quot;mean()&quot;]+[df[col].mean() for col in df.columns],
+        [&quot;std()&quot;]+[&quot;{:.2f}&quot;.format(df[col].std()) for col in df.columns],
+        [&quot;min()&quot;]+[df[col].min() for col in df.columns],
+        [&quot;max()&quot;]+[df[col].max() for col in df.columns],
+        [&quot;q1()&quot;]+[df[col].quantile(0.25) for col in df.columns],
+        [&quot;q2()&quot;]+[df[col].quantile(0.50) for col in df.columns],
+        [&quot;q3()&quot;]+[df[col].quantile(0.75) for col in df.columns],
+        [&quot;skew()&quot;]+[&quot;{:.2f}&quot;.format(df[col].skew()) for col in df.columns],
+     ]
+
+display(HTML(tabulate.tabulate(table, tablefmt='html')))
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>harga buku</th>
+<th>berat buku /gram</th>
+<th>jumlah stok perbulan</th>
+<th>jumlah terjual bulan ini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>describe()</td>
+<td><code>count        99.000000 mean     127757.464646 std       61343.035530 min       30435.000000 25%       79288.500000 50%      124700.000000 75%      169176.000000 max      249144.000000 Name: harga buku, dtype: float64</code></td>
+<td><code>count     99.000000 mean      96.444444 std       28.745620 min       45.000000 25%       73.000000 50%       97.000000 75%      121.000000 max      155.000000 Name: berat buku /gram, dtype: float64</code></td>
+<td><code>count     99.000000 mean     125.414141 std       42.966529 min       50.000000 25%       88.000000 50%      130.000000 75%      160.500000 max      200.000000 Name: jumlah stok perbulan, dtype: float64</code></td>
+<td><code>count    99.000000 mean     34.323232 std       8.778253 min      21.000000 25%      28.000000 50%      34.000000 75%      42.000000 max      50.000000 Name: jumlah terjual bulan ini, dtype: float64</code></td>
+</tr>
+<tr>
+<td>count()</td>
+<td>99</td>
+<td>99</td>
+<td>99</td>
+<td>99</td>
+</tr>
+<tr>
+<td>mean()</td>
+<td>127757.464646</td>
+<td>96.4444444444</td>
+<td>125.414141414</td>
+<td>34.3232323232</td>
+</tr>
+<tr>
+<td>std()</td>
+<td>61343.04</td>
+<td>28.75</td>
+<td>42.97</td>
+<td>8.78</td>
+</tr>
+<tr>
+<td>min()</td>
+<td>30435</td>
+<td>45</td>
+<td>50</td>
+<td>21</td>
+</tr>
+<tr>
+<td>max()</td>
+<td>249144</td>
+<td>155</td>
+<td>200</td>
+<td>50</td>
+</tr>
+<tr>
+<td>q1()</td>
+<td>79288.5</td>
+<td>73.0</td>
+<td>88.0</td>
+<td>28.0</td>
+</tr>
+<tr>
+<td>q2()</td>
+<td>124700.0</td>
+<td>97.0</td>
+<td>130.0</td>
+<td>34.0</td>
+</tr>
+<tr>
+<td>q3()</td>
+<td>169176.0</td>
+<td>121.0</td>
+<td>160.5</td>
+<td>42.0</td>
+</tr>
+<tr>
+<td>skew()</td>
+<td>0.25</td>
+<td>-0.02</td>
+<td>-0.06</td>
+<td>0.18</td>
+</tr>
+</tbody>
+</table>
+<h2 id="project-layout">Project layout</h2></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-09-12 04:31:04
+-->
