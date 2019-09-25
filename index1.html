@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=".">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#welcome-to-my-website">WELCOME TO MY WEBSITE</a></li>
+            <li><a href="#penambangan-data-data-mining">PENAMBANGAN DATA (DATA MINING)</a></li>
+        <li class="main "><a href="#tugas-1">TUGAS 1</a></li>
+        <li class="main "><a href="#mengukur-jarak-data">MENGUKUR JARAK DATA</a></li>
+        <li class="main "><a href="#mengukur-jarak-data-numerik">mengukur jarak data numerik</a></li>
+            <li><a href="#minkowski-distance">Minkowski Distance</a></li>
+            <li><a href="#manhattan-distance">Manhattan distance</a></li>
+            <li><a href="#euclidean-distance">Euclidean distance</a></li>
+            <li><a href="#average-distance">Average Distance</a></li>
+            <li><a href="#weighted-euclidean-distance">Weighted euclidean distance</a></li>
+            <li><a href="#chord-distance">Chord distance</a></li>
+            <li><a href="#mahalanobis-distance">Mahalanobis distance</a></li>
+            <li><a href="#cosine-measure">Cosine measure</a></li>
+            <li><a href="#pearson-correlation">Pearson correlation</a></li>
+            <li><a href="#mengukur-jarak-atribut-binary">Mengukur Jarak Atribut Binary.</a></li>
+            <li><a href="#mengukur-jarak-tipe-categorical">Mengukur Jarak Tipe categorical</a></li>
+            <li><a href="#mengukur-jarak-tipe-ordinal">Mengukur Jarak Tipe Ordinal</a></li>
+            <li><a href="#menghitung-jarak-tipe-campuran">Menghitung Jarak Tipe Campuran</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-my-website">WELCOME TO MY WEBSITE</h1>
+<p>CREATE BY : Alful Laila S (NIM : 180411100079)</p>
+<h2 id="penambangan-data-data-mining">PENAMBANGAN DATA (DATA MINING)</h2>
+<ul>
+<li>pengertian</li>
+</ul>
+<p>​ <strong>Data Mining</strong> adalah Serangkaian proses untuk menggali nilai tambah berupa informasi yang selama ini tidak diketahui secara manual dari suatu basisdata dengan melakukan penggalian pola-pola dari data dengan tujuan untuk memanipulasi data menjadi informasi yang lebih berharga yang diperoleh dengan cara mengekstraksi dan mengenali pola yang penting atau menarik dari data yang terdapat dalam basisdata.</p>
+<p><strong>Data mining</strong> biasa juga dikenal nama lain seperti : Knowledge discovery (mining) in databases (KDD), ekstraksi pengetahuan (knowledge extraction) Analisa data/pola dan kecerdasan bisnis (business intelligence) dan merupakan alat yang penting untuk memanipulasi data untuk penyajian informasi sesuai kebutuhan user dengan tujuan untuk membantu dalam analisis koleksi pengamatan perilaku, secara umum definisi data-mining dapat diartikan sebagai berikut</p>
+<ul>
+<li>Proses penemuan pola yang menarik dari data yang tersimpan dalam jumlah besar.</li>
+<li>Ekstraksi dari suatu informasi yang berguna atau menarik (non-trivial, implisit, sebefumnya belum diketahui potensial kegunaannya) pola atau pengetahuan dari data yang disimpan dalam jumfah besar.</li>
+<li>
+<p>Ekplorasi dari analisa secara otomatis atau semiotomatis terhadap data-data dalam jumlah besar untuk mencari pola dan aturan yang berarti.</p>
+</li>
+<li>
+<p>konsep data mining</p>
+</li>
+</ul>
+<p>​ <strong>*Data mining</strong>* sangat perlu  dilakukan terutama dalam mengelola Data yang sangat besar untuk memudahkan aktifitas recording suatu transaksi dan untuk proses data warehousing agar dapat memberikan informasi yang akurat bagi penggunanya.</p>
+<p>Alasan utama mengapa data mining sangat menarik perhatian industri informasi dalam beberapa tahun belakangan ini adalah karena tersedianya data dalam jumlah yang besar dan semakin besarnya kebutuhan untuk mengubah data tersebut menjadi informasi dan pengetahuan yang berguna karena sesuai fokus bidang ilmu ini yaitu melakukan kegiatan mengekstraksi atau menambang pengetahuan dari data yang berukuran/berjumlah besar, informasi inilah yang nantinya sangat berguna untuk pengembangan. berikut langkah-langkahnya :</p>
+<ol>
+<li>Data cleaning (untuk menghilangkan noise data yang tidak konsisten) Data integration (di mana sumber data yang terpecah dapat disatukan)</li>
+<li><em>Data selection</em> (di mana data yang relevan dengan tugas analisis dikembalikan ke dalam database)</li>
+<li>Data transformation (di mana data berubah atau bersatu menjadi bentuk yang tepat untuk menambang dengan ringkasan performa atau operasi agresi)</li>
+<li>Knowledge Discovery (proses esensial di mana metode yang intelejen digunakan untuk mengekstrak pola data)</li>
+<li>Pattern evolution (untuk mengidentifikasi pola yang benar-benar menarik yang mewakili pengetahuan berdasarkan atas beberapa tindakan yang menarik)</li>
+<li>Knowledge presentation (di mana gambaran teknik visualisasi dan pengetahuan digunakan untuk memberikan pengetahuan yang telah ditambang kepada user).</li>
+</ol>
+<h1 id="tugas-1"><strong>TUGAS 1</strong></h1>
+<p>​   </p>
+<pre><code>from scipy import stats
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+</code></pre>
+
+<pre><code>df= pd.read_csv(&quot;penambangan1.csv&quot;)
+df
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>harga buku</th>
+<th>berat buku /gram</th>
+<th>jumlah stok perbulan</th>
+<th>jumlah terjual bulan ini</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>215319</td>
+<td>148</td>
+<td>110</td>
+<td>25</td>
+</tr>
+<tr>
+<td>1</td>
+<td>241046</td>
+<td>133</td>
+<td>139</td>
+<td>44</td>
+</tr>
+<tr>
+<td>2</td>
+<td>146993</td>
+<td>73</td>
+<td>160</td>
+<td>48</td>
+</tr>
+<tr>
+<td>3</td>
+<td>37237</td>
+<td>108</td>
+<td>105</td>
+<td>50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>239236</td>
+<td>85</td>
+<td>128</td>
+<td>28</td>
+</tr>
+<tr>
+<td>5</td>
+<td>148009</td>
+<td>123</td>
+<td>83</td>
+<td>21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>47522</td>
+<td>118</td>
+<td>178</td>
+<td>50</td>
+</tr>
+<tr>
+<td>7</td>
+<td>65608</td>
+<td>50</td>
+<td>90</td>
+<td>43</td>
+</tr>
+<tr>
+<td>8</td>
+<td>43415</td>
+<td>106</td>
+<td>152</td>
+<td>23</td>
+</tr>
+<tr>
+<td>9</td>
+<td>53957</td>
+<td>59</td>
+<td>183</td>
+<td>26</td>
+</tr>
+<tr>
+<td>10</td>
+<td>94541</td>
+<td>52</td>
+<td>58</td>
+<td>25</td>
+</tr>
+<tr>
+<td>11</td>
+<td>213957</td>
+<td>149</td>
+<td>146</td>
+<td>34</td>
+</tr>
+<tr>
+<td>12</td>
+<td>69540</td>
+<td>62</td>
+<td>173</td>
+<td>33</td>
+</tr>
+<tr>
+<td>13</td>
+<td>134574</td>
+<td>126</td>
+<td>137</td>
+<td>28</td>
+</tr>
+<tr>
+<td>14</td>
+<td>145631</td>
+<td>96</td>
+<td>134</td>
+<td>28</td>
+</tr>
+<tr>
+<td>15</td>
+<td>194378</td>
+<td>75</td>
+<td>92</td>
+<td>50</td>
+</tr>
+<tr>
+<td>16</td>
+<td>133493</td>
+<td>115</td>
+<td>132</td>
+<td>41</td>
+</tr>
+<tr>
+<td>17</td>
+<td>222274</td>
+<td>107</td>
+<td>50</td>
+<td>42</td>
+</tr>
+<tr>
+<td>18</td>
+<td>142645</td>
+<td>49</td>
+<td>51</td>
+<td>23</td>
+</tr>
+<tr>
+<td>19</td>
+<td>169453</td>
+<td>56</td>
+<td>165</td>
+<td>45</td>
+</tr>
+<tr>
+<td>20</td>
+<td>85688</td>
+<td>134</td>
+<td>197</td>
+<td>45</td>
+</tr>
+<tr>
+<td>21</td>
+<td>164231</td>
+<td>58</td>
+<td>161</td>
+<td>42</td>
+</tr>
+<tr>
+<td>22</td>
+<td>205956</td>
+<td>106</td>
+<td>78</td>
+<td>48</td>
+</tr>
+<tr>
+<td>23</td>
+<td>126871</td>
+<td>121</td>
+<td>148</td>
+<td>43</td>
+</tr>
+<tr>
+<td>24</td>
+<td>241294</td>
+<td>110</td>
+<td>177</td>
+<td>35</td>
+</tr>
+<tr>
+<td>25</td>
+<td>44454</td>
+<td>127</td>
+<td>156</td>
+<td>44</td>
+</tr>
+<tr>
+<td>26</td>
+<td>132903</td>
+<td>57</td>
+<td>157</td>
+<td>30</td>
+</tr>
+<tr>
+<td>27</td>
+<td>94979</td>
+<td>73</td>
+<td>90</td>
+<td>45</td>
+</tr>
+<tr>
+<td>28</td>
+<td>75817</td>
+<td>83</td>
+<td>95</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>61783</td>
+<td>64</td>
+<td>159</td>
+<td>37</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>69</td>
+<td>109358</td>
+<td>138</td>
+<td>73</td>
+<td>24</td>
+</tr>
+<tr>
+<td>70</td>
+<td>163947</td>
+<td>153</td>
+<td>72</td>
+<td>39</td>
+</tr>
+<tr>
+<td>71</td>
+<td>63159</td>
+<td>125</td>
+<td>107</td>
+<td>23</td>
+</tr>
+<tr>
+<td>72</td>
+<td>42104</td>
+<td>109</td>
+<td>145</td>
+<td>46</td>
+</tr>
+<tr>
+<td>73</td>
+<td>80948</td>
+<td>95</td>
+<td>149</td>
+<td>36</td>
+</tr>
+<tr>
+<td>74</td>
+<td>143200</td>
+<td>106</td>
+<td>189</td>
+<td>31</td>
+</tr>
+<tr>
+<td>75</td>
+<td>83148</td>
+<td>112</td>
+<td>162</td>
+<td>32</td>
+</tr>
+<tr>
+<td>76</td>
+<td>147670</td>
+<td>144</td>
+<td>188</td>
+<td>30</td>
+</tr>
+<tr>
+<td>77</td>
+<td>105098</td>
+<td>115</td>
+<td>161</td>
+<td>22</td>
+</tr>
+<tr>
+<td>78</td>
+<td>135910</td>
+<td>87</td>
+<td>70</td>
+<td>46</td>
+</tr>
+<tr>
+<td>79</td>
+<td>87125</td>
+<td>71</td>
+<td>82</td>
+<td>28</td>
+</tr>
+<tr>
+<td>80</td>
+<td>135804</td>
+<td>95</td>
+<td>79</td>
+<td>42</td>
+</tr>
+<tr>
+<td>81</td>
+<td>30766</td>
+<td>109</td>
+<td>166</td>
+<td>26</td>
+</tr>
+<tr>
+<td>82</td>
+<td>87804</td>
+<td>76</td>
+<td>190</td>
+<td>29</td>
+</tr>
+<tr>
+<td>83</td>
+<td>233446</td>
+<td>88</td>
+<td>95</td>
+<td>26</td>
+</tr>
+<tr>
+<td>84</td>
+<td>31834</td>
+<td>97</td>
+<td>103</td>
+<td>21</td>
+</tr>
+<tr>
+<td>85</td>
+<td>54182</td>
+<td>112</td>
+<td>76</td>
+<td>22</td>
+</tr>
+<tr>
+<td>86</td>
+<td>146553</td>
+<td>121</td>
+<td>59</td>
+<td>42</td>
+</tr>
+<tr>
+<td>87</td>
+<td>208887</td>
+<td>124</td>
+<td>57</td>
+<td>24</td>
+</tr>
+<tr>
+<td>88</td>
+<td>207968</td>
+<td>101</td>
+<td>153</td>
+<td>35</td>
+</tr>
+<tr>
+<td>89</td>
+<td>249144</td>
+<td>50</td>
+<td>142</td>
+<td>30</td>
+</tr>
+<tr>
+<td>90</td>
+<td>110491</td>
+<td>132</td>
+<td>141</td>
+<td>30</td>
+</tr>
+<tr>
+<td>91</td>
+<td>219300</td>
+<td>126</td>
+<td>147</td>
+<td>37</td>
+</tr>
+<tr>
+<td>92</td>
+<td>169832</td>
+<td>95</td>
+<td>151</td>
+<td>33</td>
+</tr>
+<tr>
+<td>93</td>
+<td>167964</td>
+<td>77</td>
+<td>200</td>
+<td>34</td>
+</tr>
+<tr>
+<td>94</td>
+<td>70991</td>
+<td>92</td>
+<td>118</td>
+<td>46</td>
+</tr>
+<tr>
+<td>95</td>
+<td>50295</td>
+<td>155</td>
+<td>166</td>
+<td>43</td>
+</tr>
+<tr>
+<td>96</td>
+<td>100656</td>
+<td>92</td>
+<td>71</td>
+<td>23</td>
+</tr>
+<tr>
+<td>97</td>
+<td>212300</td>
+<td>122</td>
+<td>65</td>
+<td>41</td>
+</tr>
+<tr>
+<td>98</td>
+<td>93128</td>
+<td>86</td>
+<td>67</td>
+<td>31</td>
+</tr>
+</tbody>
+</table>
+<pre><code>from IPython.display import HTML, display
+import tabulate
+table=[
+        [&quot;method&quot;]+[x for x in df.columns],
+        [&quot;describe()&quot;]+['&lt;pre&gt;'+str(df[col].describe())+'&lt;/pre&gt;' for col in df.columns],
+        [&quot;count()&quot;]+[df[col].count() for col in df.columns],
+        [&quot;mean()&quot;]+[df[col].mean() for col in df.columns],
+        [&quot;std()&quot;]+[&quot;{:.2f}&quot;.format(df[col].std()) for col in df.columns],
+        [&quot;min()&quot;]+[df[col].min() for col in df.columns],
+        [&quot;max()&quot;]+[df[col].max() for col in df.columns],
+        [&quot;q1()&quot;]+[df[col].quantile(0.25) for col in df.columns],
+        [&quot;q2()&quot;]+[df[col].quantile(0.50) for col in df.columns],
+        [&quot;q3()&quot;]+[df[col].quantile(0.75) for col in df.columns],
+        [&quot;skew()&quot;]+[&quot;{:.2f}&quot;.format(df[col].skew()) for col in df.columns],
+     ]
+
+display(HTML(tabulate.tabulate(table, tablefmt='html')))
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>harga buku</th>
+<th>berat buku /gram</th>
+<th>jumlah stok perbulan</th>
+<th>jumlah terjual bulan ini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>describe()</td>
+<td><code>count        99.000000 mean     127757.464646 std       61343.035530 min       30435.000000 25%       79288.500000 50%      124700.000000 75%      169176.000000 max      249144.000000 Name: harga buku, dtype: float64</code></td>
+<td><code>count     99.000000 mean      96.444444 std       28.745620 min       45.000000 25%       73.000000 50%       97.000000 75%      121.000000 max      155.000000 Name: berat buku /gram, dtype: float64</code></td>
+<td><code>count     99.000000 mean     125.414141 std       42.966529 min       50.000000 25%       88.000000 50%      130.000000 75%      160.500000 max      200.000000 Name: jumlah stok perbulan, dtype: float64</code></td>
+<td><code>count    99.000000 mean     34.323232 std       8.778253 min      21.000000 25%      28.000000 50%      34.000000 75%      42.000000 max      50.000000 Name: jumlah terjual bulan ini, dtype: float64</code></td>
+</tr>
+<tr>
+<td>count()</td>
+<td>99</td>
+<td>99</td>
+<td>99</td>
+<td>99</td>
+</tr>
+<tr>
+<td>mean()</td>
+<td>127757.464646</td>
+<td>96.4444444444</td>
+<td>125.414141414</td>
+<td>34.3232323232</td>
+</tr>
+<tr>
+<td>std()</td>
+<td>61343.04</td>
+<td>28.75</td>
+<td>42.97</td>
+<td>8.78</td>
+</tr>
+<tr>
+<td>min()</td>
+<td>30435</td>
+<td>45</td>
+<td>50</td>
+<td>21</td>
+</tr>
+<tr>
+<td>max()</td>
+<td>249144</td>
+<td>155</td>
+<td>200</td>
+<td>50</td>
+</tr>
+<tr>
+<td>q1()</td>
+<td>79288.5</td>
+<td>73.0</td>
+<td>88.0</td>
+<td>28.0</td>
+</tr>
+<tr>
+<td>q2()</td>
+<td>124700.0</td>
+<td>97.0</td>
+<td>130.0</td>
+<td>34.0</td>
+</tr>
+<tr>
+<td>q3()</td>
+<td>169176.0</td>
+<td>121.0</td>
+<td>160.5</td>
+<td>42.0</td>
+</tr>
+<tr>
+<td>skew()</td>
+<td>0.25</td>
+<td>-0.02</td>
+<td>-0.06</td>
+<td>0.18</td>
+</tr>
+</tbody>
+</table>
+<h1 id="mengukur-jarak-data">MENGUKUR JARAK DATA</h1>
+<h1 id="mengukur-jarak-data-numerik">mengukur jarak data numerik</h1>
+<p><strong>Shirkhorshidi, A. S., Aghabozorgi, S., &amp; Wah, T. Y. (2015). A comparison study on similarity and dissimilarity measures in clustering continuous data. PloS one, 10(12), e0144059.</strong></p>
+<p>Salah satu tantangan dalam era ini dengan datatabase yang memiliki banyak tipe data. Mengukur jarak adalah komponen utama dalam algoritma clustering berbasis jarak. Alogritma seperit Algoritma Partisioning misal K-Mean, K-medoidm dan fuzzy c-mean dan rough clustering bergantung pada jarak untuk melakukan pengelompokkan</p>
+<p>Sebelum menjelaskan tentang beberapa macam ukuran jarak, kita mendefinisikan terlebih dahulu yaiut v1,v2v1,v2 menyatakandua vektor yang menyatakan v1=x1,x2,...,xn,v2=y1,y2,...,yn,v1=x1,x2,...,xn,v2=y1,y2,...,yn, dimana xi,yixi,yi disebut attribut. Ada beberapa ukuran similaritas datau ukuran jarak, diantaranya</p>
+<h3 id="minkowski-distance"><em>Minkowski Distance</em></h3>
+<p>Kelompk Minkowski diantaranya adalah Euclidean distance dan Manhattan distance, yang menjadi kasus khusus dari Minkowski distance. Minkowski distance dinyatakan dengan</p>
+<p>dmin=( sumni=1|xi−yi|m)1m,m≥1dmin=( sumi=1n|xi−yi|m)1m,m≥1</p>
+<p>diman mm adalah bilangan riel positif dan xixi dan $ y_i$ adalah dua vektor dalam runang dimensi nn Implementasi ukuran jarak Minkowski pada model clustering data atribut dilakukan normalisasi untuk menghindari dominasi dari atribut yang memiliki skala data besar.</p>
+<h3 id="manhattan-distance"><em>Manhattan distance</em></h3>
+<p>Manhattan distance adalah kasus khsusu dari jarak Minkowski distance pada m = 1. Seperti Minkowski Distance, Manhattan distance sensitif terhadap outlier. BIla ukuran ini digunakan dalam algoritma clustering , bentuk cluster adalah hyper-rectangular. Ukuran ini didefinisikan dengan</p>
+<p>dman=n∑i=1|xi−yi|dman=∑i=1n|xi−yi|</p>
+<h3 id="euclidean-distance"><em>Euclidean distance</em></h3>
+<p>Jarak yang paling terkenal yang digunakan untuk data numerik adalah jarak Euclidean. Ini adalah kasus khusus dari jarak Minkowski ketika m = 2. Jarak Euclidean berkinerja baik ketika digunakan untuk kumpulan data cluster kompak atau terisolasi . Meskipun jarak Euclidean sangat umum dalam pengelompokan, ia memiliki kelemahan: jika dua vektor data tidak memiliki nilai atribut yang sama, kemungkin memiliki jarak yang lebih kecil daripada pasangan vektor data lainnya yang mengandung nilai atribut yang sama. Masalah lain dengan jarak Euclidean sebagai fitur skala terbesar akan mendominasi yang lain. Normalisasi fitur kontinu adalah solusi untuk mengatasi kelemahan ini.</p>
+<h3 id="average-distance"><em>Average Distance</em></h3>
+<p>Berkenaan dengan kekurangan dari Jarak Euclidian Distance diatas, rata rata jarak adala versi modikfikasid ari jarak Euclidian untuk memperbaiki hasil. Untuk dua titik x,yx,y dalam ruang dimensi nn, rata-rata jarak didefinisikan dengan</p>
+<p>dave=(1nn∑i=1(xi−yi)2)12dave=(1n∑i=1n(xi−yi)2)12</p>
+<h3 id="weighted-euclidean-distance"><em>Weighted euclidean distance</em></h3>
+<p>Jika berdasarkan tingkatan penting dari masing masing atribut ditentukan, maka Weighted Euclidean distance adalah modifikisasi lain dari jarak Euclidean distance yang dapat digunakan. Ukuran ini dirumuskan dengan</p>
+<p>dwe=(n∑i=1wi(xi−yi)2)12dwe=(∑i=1nwi(xi−yi)2)12dimana wiwi adalah bobot yang diberikan pada atribut ke i.</p>
+<h3 id="chord-distance"><em>Chord distance</em></h3>
+<p>Chord distance adalah salah satu ukuran jarak modifikasi Euclidean distance untuk mengatasi kekurangan dari Euclidean distance. Ini dapat dipecahkan juga dengan menggunakan skala pengukuran yang baik. Jarak ini dapat juga dihitung dari data yang tidak dinormalisasi . Chord distance didefinisikan dengan</p>
+<p>dchord=(2−2∑ni=1xiyi∥x∥2∥y∥2)12dchord=(2−2∑i=1nxiyi‖x‖2‖y‖2)12</p>
+<p>dimana ∥x∥2‖x‖2 adalah L2-norm∥x∥2=√∑ni=1x2iL2-norm‖x‖2=∑i=1nxi2</p>
+<h3 id="mahalanobis-distance"><em>Mahalanobis distance</em></h3>
+<p>Mahalanobis distance berdasarkan data berbeda dengan Euclidean dan Manhattan distances yang bebas antra data dengan data yang lain. Jarak Mahalanobis yang teratur dapat digunakan untuk mengekstraksi hyperellipsoidal clusters. Jarak Mahalanobis dapat mengurangi distorsi yang disebabkan oleh korelasi linier antara fitur dengan menerapkan transformasi pemutihan ke data atau dengan menggunakan kuadrat Jarak mahalanobis. Mahalanobis distance dinyatakan dengan</p>
+<p>dmah=√(x−y)S−1(x−y)Tdmah=(x−y)S−1(x−y)T</p>
+<p>diman SS adalah matrik covariance data.</p>
+<h3 id="cosine-measure"><em>Cosine measure</em></h3>
+<p>Ukuran Cosine similarity lebih banyak digunakan dalam similaritas dokumen dan dinyatakan dengan</p>
+<p>Cosine(x,y)=∑ni=1xiyi∥x∥2∥y∥2Cosine(x,y)=∑i=1nxiyi‖x‖2‖y‖2</p>
+<p>dimana ∥y∥2‖y‖2 adalah Euclidean norm dari vektor y=(y1,y2,…,yn)y=(y1,y2,…,yn) didefinisikan dengan ∥y∥2=√y21+y22+…+y2n‖y‖2=y12+y22+…+yn2</p>
+<h3 id="pearson-correlation"><em>Pearson correlation</em></h3>
+<p>Pearson correlation banyak digunakan dalam data expresi gen. Ukuran similaritas ini menghitung similaritas antara duan bentuk pola expresi gen. Pearson correlation didefinisikan dengan</p>
+<p>Pearson(x,y)=∑ni=1(xi−μx)(yi−μy)√∑ni=1(xi−yi)2√∑ni=1(xi−yi)2Pearson(x,y)=∑i=1n(xi−μx)(yi−μy)∑i=1n(xi−yi)2∑i=1n(xi−yi)2</p>
+<p>The Pearson correlation kelemahannya adalah sensitif terhadap outlier</p>
+<h2 id="mengukur-jarak-atribut-binary">Mengukur Jarak Atribut Binary.</h2>
+<p>Mari kita lihat similaritas dan desimilirity untuk objek yang dijelaskan oleh atribut biner simetris atau asimetris. Aatribut biner hanya memiliki dua status: 0 dan 1 Contoh atribut perokok menggambarkan seorang pasien, misalnya, 1 menunjukkan bahwa pasien merokok, sedangkan 0 menunjukkan pasien tidak merokok. Memperlakukan atribut biner sebagai atribut numerik tidak diperkenankan. Oleh karena itu, metode khusus untuk data biner diperlukan untuk membedakan komputasi.</p>
+<p>Jadi, bagaimana kita bisa menghitung ketidaksamaan antara dua atribut biner? ”Satu pendekatan melibatkan penghitungan matriks ketidaksamaan dari data biner yang diberikan. Jika semua atribut biner dianggap memiliki bobot yang sama, kita memiliki tabel kontingensi 2×22×2 di mana qq adalah jumlah atribut yang sama dengan 1 untuk kedua objek ii dan jj, rr adalah jumlah atribut yang sama dengan 1 untuk objek ii tetapi 0 untuk objek jj, ss adalah jumlah atribut yang sama dengan 0 untuk objek ii tetapi 1 untuk objek jj, dan tt adalah jumlah atribut yang sama dengan 0 untuk kedua objek ii dan jj. Jumlah total atribut adalah pp, di mana p=q+r+s+tp=q+r+s+t</p>
+<p>Ingatlah bahwa untuk atribut biner simetris, masing-masing nilai bobot yang sama.Dissimilarity yang didasarkan pada atribut aymmetric binary disebut symmetric binary dissimilarity. Jika objek i dan j dinyatakan sebagai atribut biner simetris, maka dissimilarity antarii dan jj adalah</p>
+<p>d(i,j)=r+sq+r+s+td(i,j)=r+sq+r+s+t</p>
+<p>Untuk atribut biner asimetris, kedua kondisi tersebut tidak sama pentingnya, seperti hasil positif (1) dan negatif (0) dari tes penyakit. Diberikan dua atribut biner asimetris, pencocokan keduanya 1 (kecocokan positif) kemudian dianggap lebih signifikan daripada kecocokan negatif. Ketidaksamaan berdasarkan atribut-atribut ini disebut asimetris biner dissimilarity, di mana jumlah kecocokan negatif, t, dianggap tidak penting dan dengan demikian diabaikan. Berikut perhitungannya</p>
+<p>d(i,j)=r+sq+r+sd(i,j)=r+sq+r+s</p>
+<p>Kita dapat mengukur perbedaan antara dua atribut biner berdasarkan pada disimilarity. Misalnya, biner asimetris kesamaan antara objek ii dan jj dapat dihitung dengan</p>
+<p>sim(i,j)=qq+r+s=1−d(i,j)sim⁡(i,j)=qq+r+s=1−d(i,j)</p>
+<p>Persamaan similarity ini disebut dengan <strong>Jaccard coefficient</strong></p>
+<h2 id="mengukur-jarak-tipe-categorical">Mengukur Jarak Tipe categorical</h2>
+<p><strong>Li, C., &amp; Li, H. (2010). A Survey of Distance Metrics for Nominal Attributes. JSW, 5(11), 1262-1269.</strong></p>
+<h3 id="overlay-metric"><em>Overlay Metric</em>[</h3>
+<p>Ketika semua atribut adalah bertipe nominal, ukuran jarak yang paling sederhana adalah dengan Ovelay Metric (OM) yang dinyatakan dengan</p>
+<p>d(x,y)=n∑i=1δ(ai(x),ai(y))d(x,y)=∑i=1nδ(ai(x),ai(y))</p>
+<p>dimana nn adalah banyaknya atribut, ai(x)ai(x) dan ai(y)ai(y) adalah nilai atribut ke ii yaitu AiAi dari masing masing objek xx dan yy, δ (ai(x),ai(y))δ (ai(x),ai(y)) adalah 0 jika ai(x)=ai(y)ai(x)=ai(y) dan 1 jika sebaliknya.</p>
+<p>OM banyak digunakan oleh instance-based learning dan locally weighted learning. Jelas sekali , ini sedikit beruk untuk mengukur jarak antara masing-masing pasangan sample, karena gagal memanfaatkan tambahan informasi yang diberikan oleh nilai atribut nominal yang bisa membantu dalam generalisasi.</p>
+<h3 id="value-difference-metric-vdm"><em>Value Difference Metric (VDM)</em></h3>
+<p>VDM dikenalkan oleh Standfill and Waltz, versi sederhana dari VDM tanpa skema pembobotan didefinsisikan dengan</p>
+<p>d(x,y)=n∑i=1C∑c=1|P(c|ai(x))−P(c|ai(y))|d(x,y)=∑i=1n∑c=1C|P(c|ai(x))−P(c|ai(y))|</p>
+<p>dimana CCadalah banyaknya kelas, P(c|ai(x))P(c|ai(x)) adalah probabilitas bersyarat dimana kelas xx adalah cc dari atribut AiAi, yang memiliki nilai ai(x)ai(x), P(c|ai(y))P(c|ai(y)) adalah probabilitas bersyarat dimana kelas yy adalah cc dengan atribut AiAi memiliki nilai ai(y)ai(y)</p>
+<p>VDM mengasumsikan bahwa dua nilai dari atribut adalah lebih dekat jika memiliki klasifikasi sama. Pendekatan lain berbasi probabilitas adalah SFM (Short and Fukunaga Metric) yang kemudian dikembangkan oleh Myles dan Hand dan didefinisikan dengan</p>
+<p>d(x,y)=C∑c=1|P(c|x)−P(c|y)|d(x,y)=∑c=1C|P(c|x)−P(c|y)|</p>
+<p>diman probabilitas keanggotaan kelas diestimasi dengan P(c|x)P(c|x) dan P(c|y)P(c|y) didekati dengan Naive Bayes,</p>
+<h3 id="minimum-risk-metric-mrm"><em>Minimum Risk Metric (MRM)</em></h3>
+<p>Ukuran ini dipresentasikan oleh Blanzieri and Ricci, berbeda dari SFM yaitu meminimumkan selisih antara kesalahan berhingga dan kesalahan asymtotic. MRM meminimumkan risk of misclassification yang didefinisikan dengan</p>
+<p>d(x,y)=C∑c=1P(c|x)(1−P(c|y))d(x,y)=∑c=1CP(c|x)(1−P(c|y))</p>
+<h2 id="mengukur-jarak-tipe-ordinal"><strong>Mengukur Jarak Tipe Ordinal</strong></h2>
+<p><strong>Han, J., Pei, J., &amp; Kamber, M. (2011). Data mining: concepts and techniques. Elsevier</strong>.</p>
+<p>Nilai-nilai atribut ordinal memiliki urutan atau peringkat, namun besarnya antara nilai-nilai berturut-turut tidak diketahui. Contohnya tingkatan kecil, sedang, besar untuk atribut ukuran. Atribut ordinal juga dapat diperoleh dari diskritisasi atribut numerik dengan membuat rentang nilai ke dalam sejumlah kategori tertentu. Kategori-kategori ini disusun dalam peringkat. Yaitu, rentang atribut numerik dapat dipetakan ke atribut ordinal ff yang memiliki MfMf state. Misalnya, kisaran suhu atribut skala-skala (dalam Celcius)dapat diatur ke dalam status berikut: −30 hingga −10, −10 hingga 10, 10 hingga 30, masing-masing mewakili kategori suhu dingin, suhu sedang, dan suhu hangat. MM adalah jumlah keadaan yang dapat dilakukan oleh atribut ordinalmemiliki. State ini menentukan peringkat 1,...,Mf1,...,Mf</p>
+<p>Perlakuan untuk atribut ordinal adalah cukup sama dengan atribut numerik ketika menghitung disimilarity antara objek. Misalkan ff adalah atribut-atribut dari atribut ordinal dari nn objek. Menghitung disimilarity terhadap f fitur sebagai berikut:</p>
+<ul>
+<li>Nilai ff untuk objek ke-ii adalah xifxif, dan ff memiliki MfMf status urutan , mewakili peringkat 1,..,Mf1,..,Mf Ganti setiap xifxif dengan peringkatnya, rif∈{1...Mf}rif∈{1...Mf}</li>
+<li>Karena setiap atribut ordinal dapat memiliki jumlah state yang berbeda, diperlukan untuk memetakan rentang setiap atribut ke [0,0, 1.0] sehingga setiap atribut memiliki bobot yang sama. Perl melakukan normalisasi data dengan mengganti peringkat rifrif denganzif=rif−1Mf−1zif=rif−1Mf−1</li>
+<li>Dissimilarity kemudian dihitung dengan menggunakan ukuran jarak seperti atribut numerik dengan data yang baru setelah ditransformasi $ z _ { i f }$</li>
+</ul>
+<h2 id="menghitung-jarak-tipe-campuran"><strong>Menghitung Jarak Tipe Campuran</strong></h2>
+<p><strong>Wilson, D. R., &amp; Martinez, T. R. (1997). Improved heterogeneous distance functions. Journal of artificial intelligence research, 6, 1-34.</strong></p>
+<p>Menghitung ketidaksamaan antara objek dengan atribut campuran yang berupa nominal, biner simetris, biner asimetris, numerik, atau ordinal yang ada pada kebanyakan databasae dapat dinyatakan dengan memproses semua tipe atribut secara bersamaan. Salah satu teknik tersebut menggabungkan atribut yang berbeda ke dalam matriks ketidaksamaan tunggal dan menyatakannya dengan skala interval antar [0,0,1.0][0,0,1.0]. Misalkan data berisi atribut pp tipe campuran. Ketidaksamaan (disimilarity ) antara objek ii dan jj dinyatakan dengan</p>
+<p>d(i,j)=∑pf=1δ(f)ijd(f)ij∑pf=1δ(f)ijd(i,j)=∑f=1pδij(f)dij(f)∑f=1pδij(f)</p>
+<p>dimana δfij=0δijf=0 - jika xifxif atau xjfxjf adalah hilang (i.e., tidak ada pengukuran dari atribut f untuk objek ii atau objek jj)</p>
+<ul>
+<li>jika xif=xjf=0xif=xjf=0 dan</li>
+<li>atribut ff adalah binary asymmetric,</li>
+</ul>
+<p>selain itu δfij=1δijf=1</p>
+<p>Kontribusi dari atribut ff untuk dissimilarity antara i dan j (yaitu.dfijdijf) dihitung bergantung pada tipenya,</p>
+<ul>
+<li>
+<p>Jika ff adalah numerik, dfij=∥xif−xjf∥maxhxhf−minhxhfdijf=‖xif−xjf‖maxhxhf−minhxhf, di mana h menjalankan semua nilai objek yang tidak hilang untuk atribut f</p>
+</li>
+<li>
+<p>Jika ff adalah nominal atau binary,$d_{ij}^{f}=0 $jika xif=xjfxif=xjf, sebaliknya dfij=1dijf=1</p>
+</li>
+<li>
+<p>Jika ff adalah ordinal maka hitung rangking rifrif dan zif=rif−1Mf−1zif=rif−1Mf−1 , dan perlakukan zifzif sebagai numerik.</p>
+</li>
+</ul>
+<p># TUGAS 2</p>
+<p><code>from scipy import stats
+  import pandas as pd</code></p>
+<p><code>df = pd.read_csv('Acute Inflammations.csv',nrows=4)
+  df</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Temperature of patient</th>
+<th>Occurrence of nausea</th>
+<th>Lumbar pain</th>
+<th>Urine pushing</th>
+<th>Micturition pains</th>
+<th>Burning of urethra. itch. swelling of urethra outlet</th>
+<th>Inflammation of urinary bladder</th>
+<th>Nephritis of renal pelvis origin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>35.5</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>1</td>
+<td>35.9</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>2</td>
+<td>35.9</td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>3</td>
+<td>36.0</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p><code>binary=[1,2,3,4,5,6,7]</code></p>
+<p>```
+  from IPython.display import HTML, display
+  import tabulate
+  table=[
+      ["Data"]+["Jarak"]+["Numeric"]+["Binary"],
+      ["v1-v2"]+[0]+[0]+[0],
+      ["v1-v3"]+[0]+[0]+[0],
+      ["v2-v3"]+[0]+[0]+[0],
+      ["v2-v4"]+[0]+[0]+[0],
+      ["v3-v4"]+[0]+[0]+[0],
+      ["v4-v1"]+[0]+[0]+[0],
+      ]</p>
+<p>display(HTML(tabulate.tabulate(table, tablefmt='html')))
+  ```</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Jarak</th>
+<th>Numeric</th>
+<th>Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1-v2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v1-v3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v2-v3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v2-v4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v3-v4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v4-v1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>jarak Numeric</strong></p>
+<pre><code>def chordDist(v1,v2,jnis):
+    jmlh=0
+    normv1=0
+    normv2=0
+    for x in range (len(jnis)):
+        normv1=normv1+(df.values.tolist()[v1][jnis[x]]**2)
+        normv2=normv2+(df.values.tolist()[v2][jnis[x]]**2)
+        jmlh=jmlh+((df.values.tolist()[v1][jnis[x]])*(df.values.tolist()[v2][jnis[x]]))
+    return ((2-(2*jmlh/(normv1*normv2)))**0.5)
+</code></pre>
+
+<pre><code>from IPython.display import HTML, display
+import tabulate
+table=[
+    [&quot;Data&quot;]+[&quot;Jarak&quot;]+[&quot;Numeric&quot;]+[&quot;Binary&quot;],
+    [&quot;v1-v2&quot;]+[0]+[chordDist(0,1,numerical)]+[0],
+    [&quot;v1-v3&quot;]+[0]+[chordDist(0,2,numerical)]+[0],
+    [&quot;v2-v3&quot;]+[0]+[chordDist(1,2,numerical)]+[0],
+    [&quot;v2-v4&quot;]+[0]+[chordDist(1,3,numerical)]+[0],
+    [&quot;v3-v4&quot;]+[0]+[chordDist(2,3,numerical)]+[0],
+    [&quot;v4-v1&quot;]+[0]+[chordDist(3,0,numerical)]+[0],
+    ]
+
+display(HTML(tabulate.tabulate(table, tablefmt='html')))
+
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Jarak</th>
+<th>Numeric</th>
+<th>Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1-v2</td>
+<td>0</td>
+<td>1.4136586205991097</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v1-v3</td>
+<td>0</td>
+<td>1.4136586205991097</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v2-v3</td>
+<td>0</td>
+<td>1.4136648049944642</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v2-v4</td>
+<td>0</td>
+<td>1.4136663296155507</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v3-v4</td>
+<td>0</td>
+<td>1.4136663296155507</td>
+<td>0</td>
+</tr>
+<tr>
+<td>v4-v1</td>
+<td>0</td>
+<td>1.4136601624057612</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JARAK  BINARY</strong></p>
+<pre><code>def binaryDist(v1,v2,jnis):
+    q=0
+    r=0
+    s=0
+    t=0
+    for x in range (len(jnis)):
+        if (df.values.tolist()[v1][jnis[x]])==&quot;yes&quot; and (df.values.tolist()[v2][jnis[x]])==&quot;yes&quot;:
+            q=q+1
+        elif (df.values.tolist()[v1][jnis[x]])==&quot;yes&quot; and (df.values.tolist()[v2][jnis[x]])==&quot;no&quot;:
+            r=r+1
+        elif (df.values.tolist()[v1][jnis[x]])==&quot;no&quot; and (df.values.tolist()[v2][jnis[x]])==&quot;yes&quot;:
+            s=s+1
+        else:
+            t=t+1
+    return ((r+s)/(q+r+s+t))
+</code></pre>
+
+<pre><code>from IPython.display import HTML, display
+import tabulate
+table=[
+    [&quot;Data&quot;]+[&quot;Jarak&quot;]+[&quot;Numeric&quot;]+[&quot;Binary&quot;],
+    [&quot;v1-v2&quot;]+[0]+[chordDist(0,1,numerical)]+[binaryDist(0,1,binary)],
+    [&quot;v1-v3&quot;]+[0]+[chordDist(0,2,numerical)]+[binaryDist(0,2,binary)],
+    [&quot;v2-v3&quot;]+[0]+[chordDist(1,2,numerical)]+[binaryDist(1,2,binary)],
+    [&quot;v2-v4&quot;]+[0]+[chordDist(1,3,numerical)]+[binaryDist(1,3,binary)],
+    [&quot;v3-v4&quot;]+[0]+[chordDist(2,3,numerical)]+[binaryDist(2,3,binary)],
+    [&quot;v4-v1&quot;]+[0]+[chordDist(3,0,numerical)]+[binaryDist(3,0,binary)],
+    ]
+
+display(HTML(tabulate.tabulate(table, tablefmt='html')))
+</code></pre>
+
+<h3 id="jarak">Jarak</h3>
+<pre><code>def jarak(v1,v2):
+    return ((chordDist(v1,v2,num)+binaryDist(v1,v2,binary))/2)
+</code></pre>
+
+<pre><code>from IPython.display import HTML, display
+import tabulate
+table=[
+    [&quot;Data&quot;]+[&quot;Jarak&quot;]+[&quot;Numeric&quot;]+[&quot;Binary&quot;],
+    [&quot;v1-v2&quot;]+[&quot;{:.2f}&quot;.format(jarak(0,1))]+[&quot;{:.2f}&quot;.format(chordDist(0,1,numerical))]+[&quot;{:.2f}&quot;.format(binaryDist(0,1,binary))],
+    [&quot;v1-v3&quot;]+[&quot;{:.2f}&quot;.format(jarak(0,2))]+[&quot;{:.2f}&quot;.format(chordDist(0,2,numerical))]+[&quot;{:.2f}&quot;.format(binaryDist(0,2,binary))],
+    [&quot;v2-v3&quot;]+[&quot;{:.2f}&quot;.format(jarak(1,2))]+[&quot;{:.2f}&quot;.format(chordDist(1,2,numerical))]+[&quot;{:.2f}&quot;.format(binaryDist(1,2,binary))],
+    [&quot;v2-v4&quot;]+[&quot;{:.2f}&quot;.format(jarak(1,3))]+[&quot;{:.2f}&quot;.format(chordDist(1,3,numerical))]+[&quot;{:.2f}&quot;.format(binaryDist(1,3,binary))],
+    [&quot;v3-v4&quot;]+[&quot;{:.2f}&quot;.format(jarak(2,3))]+[&quot;{:.2f}&quot;.format(chordDist(2,3,numerical))]+[&quot;{:.2f}&quot;.format(binaryDist(2,3,binary))],
+    [&quot;v4-v1&quot;]+[&quot;{:.2f}&quot;.format(jarak(3,0))]+[&quot;{:.2f}&quot;.format(chordDist(3,0,numerical))]+[&quot;{:.2f}&quot;.format(binaryDist(3,0,binary))],
+    ]
+
+display(HTML(tabulate.tabulate(table, tablefmt='html')))
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Jarak</th>
+<th>Numeric</th>
+<th>Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1-v2</td>
+<td>1.06</td>
+<td>1.41</td>
+<td>0.71</td>
+</tr>
+<tr>
+<td>v1-v3</td>
+<td>0.71</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>v2-v3</td>
+<td>1.06</td>
+<td>1.41</td>
+<td>0.71</td>
+</tr>
+<tr>
+<td>v2-v4</td>
+<td>0.71</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>v3-v4</td>
+<td>1.06</td>
+<td>1.41</td>
+<td>0.71</td>
+</tr>
+<tr>
+<td>v4-v1</td>
+<td>1.06</td>
+<td>1.41</td>
+<td>0.71</td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-09-13 08:31:13
+-->
